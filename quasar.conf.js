@@ -45,6 +45,10 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
+		'QTabs',
+		'QTab',
+		'QTabPane',
+		'QRouteTab',
         'QLayout',
         'QLayoutHeader',
         'QLayoutDrawer',
@@ -56,6 +60,7 @@ module.exports = function (ctx) {
         'QIcon',
         'QList',
         'QListHeader',
+        'QLayoutFooter',
         'QItem',
         'QItemMain',
         'QItemSide'

@@ -21,6 +21,16 @@
           <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
         </q-toolbar-title>
       </q-toolbar>
+		<q-tabs>
+			<q-route-tab slot="title" icon="home" label="Flats" to="/flat-list" />
+			<q-route-tab slot="title" icon="event" label="Events" to="/event-list" />
+			<q-route-tab slot="title" icon="perm contact calendar" label="Contacts" to="/contact-list" />
+			<!--<q-tab slot="title" icon="contacts" label="Contacts" />-->
+		</q-tabs>
+		
+		
+		
+		
     </q-layout-header>
 
     <q-layout-drawer
@@ -59,6 +69,30 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+	  
+    <q-layout-footer>
+      <q-toolbar
+        color="primary"
+        :glossy="$q.theme === 'mat'"
+        :inverted="$q.theme === 'ios'"
+      >
+        <q-btn
+          flat
+          dense
+          round
+          @click="leftDrawerOpen = !leftDrawerOpen"
+          aria-label="Menu"
+        >
+          <q-icon name="menu" />
+        </q-btn>
+
+        <q-toolbar-title>
+          Quasar App
+          <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-layout-footer>
+
   </q-layout>
 </template>
 
